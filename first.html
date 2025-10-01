@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome My Love Bubu ❤️</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Dancing Script', cursive;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+      transition: opacity 2s ease-in-out; /* smooth fade */
+    }
+
+    body.fade-out {
+      opacity: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #fffbea;
+      margin-bottom: 1.5rem;
+      font-weight: normal;
+      line-height: 1.4;
+    }
+
+    .cute-text {
+      font-size: 1.4rem;
+      margin: 15px 0;
+      color: #fffbea;
+      animation: fadeInUp 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(10px); opacity: 0.7; }
+      to { transform: translateY(-10px); opacity: 1; }
+    }
+
+    .enter-btn {
+      margin-top: 30px;
+      padding: 15px 40px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      background: white;
+      color: #ff3e6c;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .enter-btn:hover {
+      background: #ff3e6c;
+      color: white;
+      transform: scale(1.1);
+    }
+
+    /* Floating hearts background */
+    .heart {
+      position: absolute;
+      bottom: -50px;
+      font-size: 2rem;
+      color: white;
+      animation: floatUp 6s infinite ease-in;
+      opacity: 0.6;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(0.8); opacity: 0; }
+      30% { opacity: 1; }
+      100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container animate__animated animate__fadeIn">
+    <h1>Hey My Love ❤️</h1>
+    <h1>You Know I am the Luckiest Guy evr !!! </h1>
+    <h2>You can't even imagine I have the most Beautiful , Caring , Sweeetesstt , Cutessttt, Presttiesttt Woman as my life Partner .... </h2>
+    <p class="cute-text">You wanna see her...</p>
+    <p class="cute-text">I have a little surprise waiting for you...</p>
+    <button class="enter-btn" onclick="enterSite()">Click to Enter</button>
+    <p style="margin-top:10px; color:white; font-size:0.9rem;">(Or wait a few seconds... 💕)</p>
+  </div>
+
+  <!-- Floating hearts -->
+  <div class="heart" style="left: 20%;">❤️</div>
+  <div class="heart" style="left: 40%; animation-delay: 2s;">💖</div>
+  <div class="heart" style="left: 60%; animation-delay: 4s;">💕</div>
+  <div class="heart" style="left: 80%; animation-delay: 1s;">💗</div>
+
+  <script>
+    function enterSite() {
+      // Add fade-out effect
+      document.body.classList.add('fade-out');
+      // Redirect after fade completes
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 2000); // 2s fade matches CSS
+    }
+
+    // Auto redirect after 12 seconds with fade
+    setTimeout(enterSite, 12000);
+  </script>
+</body>
+</html>
